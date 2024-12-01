@@ -1,0 +1,301 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    height: 9%;
+    width: 100%;
+    background-color: rgba(3, 3, 146, 0.849);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
+}
+
+header .logo {
+    height: 65px;
+}
+
+header .logo img {
+    height: 100%;
+    cursor: pointer;
+}
+
+header .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+}
+
+.notification a {
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.img-person {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-person img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: red;
+}
+
+.deconnexion a {
+    padding: 10px 20px;
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.deconnexion a:hover {
+    background-color: darkred;
+}
+
+.home-content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    gap: 20px;
+}
+
+.home-content nav {
+    background-color: rgba(0, 23, 128, 0.938);
+    width: 60px;
+    height: 98%;
+    margin-top: 5px;
+    transition: width 0.5s;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-content nav:hover,
+.home-content nav.active {
+    width: 280px;
+    z-index: 1200;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.nav-items a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.nav-items a img {
+    height: 40px;
+    cursor: pointer;
+    width: 40px;
+}
+.nav-items main {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+   
+}
+
+.nav-items main img {
+    height: 40px;
+    width: 40px;
+}
+
+.nav-items main span {
+    margin-left: 10px;
+    font-weight: bold;
+    
+    
+}
+
+.nav-items a span {
+    margin-left: 10px;
+    font-weight: bold;
+    
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+    }
+    .home-content nav {
+        height: auto;
+        display: none;
+    }
+    .home-content nav.active {
+        display: block;
+    }
+    .nav-items {
+        flex: none;
+        justify-content: center;
+    }
+    .nav-items a {
+        width: 100%;
+        margin: 2px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .home-content nav {
+        flex-direction: column;
+    }
+    .nav-items {
+        height: 50px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .nav-items a img {
+        height: 20px;
+        width: 20px;
+    }
+    .nav-items a span {
+        display: none;
+    }
+}
+
+.content-page {
+    width: 90%;
+    position: relative;
+    margin-top: 20px;
+    margin: auto;
+   
+    
+}
+
+.content-page .msg {
+    width: 100%;
+    height: 25px;
+    margin: auto;
+    background-color: #DBD495;
+    
+}
+
+.content-page .msg p {
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-column {
+    flex: 1;
+    min-width: 200px;
+}
+.info-column img{
+    margin-left: 50px;
+    margin-bottom: 12px;
+    width: 120px;
+    height: 120px;
+    background-color: #c61e1e;
+    border-radius: 50%;
+}
+
+.information-tele {
+   display: flex;
+   justify-content: space-around;
+   
+}
+
+
+.info-tele{
+    margin-top:2px;
+    padding:2px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.additional-info, .password-recovery, .mfa-reset {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.save-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+.info-note {
+    font-size: 12px;
+    color: #666;
+}

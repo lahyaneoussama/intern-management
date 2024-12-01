@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    height: 9%;
+    width: 100%;
+    background-color: rgba(3, 3, 146, 0.849);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
+}
+
+header .logo {
+    height: 65px;
+}
+
+header .logo img {
+    height: 100%;
+    cursor: pointer;
+}
+
+header .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+}
+
+.notification a {
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.img-person {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-person img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: red;
+}
+
+.deconnexion a {
+    padding: 10px 20px;
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.deconnexion a:hover {
+    background-color: darkred;
+}
+
+.home-content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+.home-content nav {
+    background-color: rgba(0, 23, 128, 0.938);
+    width: 60px;
+    height: 98%;
+    margin-top: 5px;
+    transition: width 0.5s;
+    overflow: hidden;
+    position: sticky;
+}
+
+.home-content nav:hover,
+.home-content nav.active {
+    width: 300px;
+    z-index: 1200;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.nav-items a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.nav-items a img {
+    height: 40px;
+    width: 40px;
+}
+
+.nav-items a span {
+    margin-left: 10px;
+    font-weight: bold;
+    display: none;
+}
+
+.home-content nav:hover .nav-items a span,
+.home-content nav.active .nav-items a span {
+    display: inline;
+}
+
+.content-page {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.content-page .msg {
+    width: 90%;
+    height: 25px;
+    margin: auto;
+    background-color: #DBD495;
+    
+}
+
+.content-page .msg p {
+    font: 15px;
+    text-align: center;
+}
+
+.container-cours {
+    width: 90%;
+    margin:  auto;
+    padding: 20px;
+}
+h1 {
+    font-size: 1.5em;
+    color: #333;
+}
+.year {
+    margin-top: 20px;
+    width: 100%;
+}
+.year h1{
+    background: #9ca8bd58;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+   
+}
+.course-item {
+    background: #ddd;
+    border: 1px solid #ccc;
+    margin: 5px;
+    width: 45%;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.course-item a{
+    color: black;
+    text-decoration: none;
+}
+
+.course-item:hover {
+    background: #ccc;
+}
+.option {
+    background: #bbb;
+    border: 1px solid #999;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.option a{
+    color: black;
+    text-decoration: none;
+
+}
+.option:hover {
+    background: #aaa;
+}/* Media Queries */
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+    }
+    .home-content nav {
+        height: auto;
+        display: none;
+    }
+    .home-content nav.active {
+        display: block;
+    }
+    .nav-items {
+        flex: none;
+        justify-content: center;
+    }
+    .nav-items a {
+        width: 100%;
+        margin: 2px;
+    }
+    
+}
+
+.nav-items a span {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .home-content nav {
+        flex-direction: column;
+    }
+    .nav-items {
+        height: 50px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .nav-items a img {
+        height: 20px;
+        width: 20px;
+    }
+    .nav-items a span {
+        display: none;
+    }
+    .course-list {
+        width: 100%;
+        padding: 5px;
+        
+       
+    }
+    .course-item {
+        background: #bbb;
+        border: 1px solid #ccc;
+        width: 400px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+}

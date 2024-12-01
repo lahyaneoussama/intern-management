@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Notes.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo" id="img-logo">
+        </div>
+        <div class="user">
+            <div class="notification">
+                <a href="#" class="fa-solid fa-bell" id="notifictaion"></a>
+            </div>
+            <div class="img-person">
+                <img src="../img/ph-scoliare/me.jpg" alt="User Image">
+            </div>
+            <div class="deconnexion">
+                <a href="#">Deconnexion</a>
+            </div>
+        </div>
+    </header>
+    <div class="home-content">
+        <nav id="navbar" >
+            <div class="nav-items">
+                <a href="./home.php">
+                    <img src="../img/icons-nav/home.png" alt="">
+                    <span id="main-meun">Home</span>
+                </a>
+            </div>
+            <div class="nav-items">
+                <a href="../template_stagaire/notes.html">
+                    <img src="../img/icons-nav/notes.png" alt="">
+                    <span id="main-meun">Notes</span>
+                </a>
+            </div>
+            <div class="nav-items">
+                <a href="../template/reclamation.html">
+                    <img src="../img/icons-nav/contact.png" alt="">
+                    <span id="main-meun">Reclamation</span>
+                </a>
+            </div>
+            <div class="nav-items">
+                <a href="../template/licencepro.html">
+                    <img src="../img/icons-nav/LEPRO.png" alt="">
+                    <span id="main-meun">License Professionnelle</span>
+                </a>
+            </div>
+            <div class="nav-items">
+                <a href="../template/orientation.html">
+                    <img src="../img/icons-nav/orientation.png" alt="">
+                    <span id="main-meun">Orientation</span>
+                </a>
+            </div>
+            <div class="nav-items">
+                <a href="?">
+                    <img src="../img/icons-nav/Activites.png" alt="">
+                    <span id="main-meun">Activités</span>
+                </a>
+            </div>
+            <div class="nav-items">
+                <a href="?">
+                    <img src="../img/icons-nav/verifier.png" alt="">
+                    <span id="main-meun">Verification des donnes</span>
+                </a>
+            </div>
+            
+            <div class="nav-items">
+                <a href="?">
+                    <img src="../img/icons-nav/C-administrateur.png" alt="">
+                    <span id="main-meun">Contacter l'administration</span>
+                </a>
+            </div>
+            <div class="nav-items">
+                <a href="https://www.ofppt.ma/">
+                    <img src="../img/icons-nav/aide.png" alt="">
+                    <span id="main-meun">Aide</span>
+                </a>
+            </div>
+            <div class="nav-items" >
+                <main id="contact">
+                    <img src="../img/icons-nav/contact.png" alt="">
+                    <span id="main-meun">Contact</span>
+               </main>
+            </div>
+            <div class="nav-items">
+                <a href="../profile/profile.html">
+                    <img src="../img/icons-nav/user.png" alt="">
+                    <span id="main-meun">Profile</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="content-page">
+            <div class="msg">
+                <p>Bienvenue sur votre compte privé</p>
+            </div>
+       
+        <div class="header">
+            <div class="profile">
+                <img src="../img/user.jpeg" alt="Profile Picture" class="profile-pic">
+                <div class="profile-info">
+                    <h2>lahyane Oussama</h2>
+                    <p>Age: 20 Ans</p>
+                    <p>Filière: Développement Digital</p>
+                    <p>Classe: Dev102</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="content-notes">
+            <h2>Suivi des notes</h2>
+            <div class="filters" >
+                <label for="annee-scolaire">Année Scolaire</label> 
+                <select id="annee-scolaire">
+                    <option value="2023/2024">2023/2024</option>
+                    <option value="2023/2024">2024/2025</option>
+                </select>
+                <label for="session">Session</label>
+                <select id="session">
+                    <option value="premier-semestre">Premier semestre</option>
+                    <option value="premier-semestre">Deuxieme semestre</option>
+                </select>
+                <button class="search-btn" id="search">🔍</button>
+            </div>
+    
+            <table class="grades-table" id="grades-table">
+                <thead>
+                    <tr>
+                        <th>Module</th>
+                        <th>Controle 1</th>
+                        <th>Controle 2</th>
+                        <th>Controle 3</th>
+                        <th>Controle 4</th>
+                        <th>EFM</th>
+                        <th>Coef</th>
+                        <th>Moyenne</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>JavaScript</td><td></td><td></td><td></td><td></td><td>3</td><td></td><td></td></tr>
+                    <tr><td>PHP</td><td></td><td></td><td></td><td></td><td>3</td><td></td><td></td></tr>
+                    <tr><td>POO Py</td><td></td><td></td><td></td><td></td><td>2</td><td></td><td></td></tr>
+                    <tr><td>Algorithme</td><td></td><td></td><td></td><td></td><td>2</td><td></td><td></td></tr>
+                    <tr><td>Bases Donnes</td><td></td><td></td><td></td><td></td><td>3</td><td></td><td></td></tr>
+                    <tr><td>Web Statique</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td></tr>
+                    <tr><td>Securite</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td></tr>
+                    <tr><td>Metier Formation</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td></tr>
+                    <tr><td>Pie</td><td></td><td></td><td></td><td></td><td>2</td><td></td><td></td></tr>
+                    <tr><td>Arabic</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td></tr>
+                    <tr><td>Soft sikills</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td></tr>
+                    <tr><td>cultre numreique</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td></tr>
+                    <tr><td>Français</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td></tr>
+                    <tr><td>English</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td></tr>
+                </tbody>
+            </table>
+    
+            <div class="footer">
+                <div class="exam-control">
+                    <button class="exam-btn">EXAMEN & CONTROLE</button>
+                    <table class="summary-table">
+                        <tr>
+                            <td>N Moyenne Cc</td>
+                            <td>N</td>
+                            <td>N</td>
+                        </tr>
+                        <tr>
+                            <td>N Moyenne Generale</td>
+                            <td>N</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+                
+                    
+        <script src="../fromwoke/jquery-3.7.1.min.js"></script>
+        <script src="../js/jquer.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/Travailfaire.js"></script>
+</body>
+
+</html>

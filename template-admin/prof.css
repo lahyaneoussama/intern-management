@@ -1,0 +1,376 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #170b71;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    color: white;
+}
+
+.logo {
+    height: 60px;
+    width: 70px;
+}
+
+.header-admin{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+.header-admin p select{
+    background-color: rgb(33, 81, 30);
+    padding:5px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid rgb(190, 190, 190) ;
+    color: white;
+}
+ .profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#nav-systeme{
+    z-index: 100;
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 5px;
+    height: 200px;
+    width: 190px;
+    background-color: rgb(241, 239, 239);
+    box-shadow:  0 0 1px 1px rgb(255, 255, 255);
+}
+#nav-systeme a i{
+    padding-right: 10px;
+}
+#nav-systeme a {
+    padding:10px 10px;
+    text-decoration: none;
+   
+   
+}
+#nav-systeme p a{
+    font-size: 13px;
+    color: black;
+    border-bottom: 1px solid rgba(186, 185, 185, 0.612);
+}
+.deconexion{
+    background-color: rgba(255, 0, 0, 0.854);
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 5px;  
+}
+.deconexion a{
+    color: white;
+    text-decoration: none;
+     margin-left: 10px;
+
+}aside nav ul li a {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.386);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.content{
+    display: flex;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height:100vh;
+    background-color: #170b71;
+    padding: 10px 20px;
+    border-right: 1px solid #ddd;
+}
+.img-admin{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: none;
+}
+.img-admin img{
+    height: 80px;
+    width: 80px;
+    border-radius:50% ;
+    margin: auto;
+}
+
+.img-admin p{
+    width: 200px;
+    text-align: center;
+    
+    
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside nav ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.386);
+    cursor: pointer;
+    color: white;
+}
+
+
+aside button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.content-page {
+    width: 90%;
+    position: relative;
+    margin-top: 20px;
+    margin:  10px auto;
+    
+}
+.container-header {
+    max-width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;background-color: #f4f4f4;
+}
+
+.header-info {
+    display: flex;
+    gap: 40px;
+}
+
+.header-info p {
+    margin: 0;
+}
+
+.notes-header {
+    margin-top:  10px;
+    padding: 20px;
+}
+
+.notes-header h2 {
+    margin: 0 0 10px 0;
+    margin-top:  10px;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: #979494ed;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 160px;
+}
+.inptrech{
+     width: 240px;
+     height: 28px;
+     margin-top:22px;
+     border-radius: 5px;
+     padding-left: 10px;
+     border: 1px solid rgba(128, 128, 128, 0.315);
+     background-color: rgba(128, 123, 123, 0.44);
+}
+
+.search-btn {
+    height: 34px;
+    width: 51px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(11, 11, 79, 0.774);
+    border-radius: 5px;
+    border: none;
+}
+.ajouter-btn {
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 25px;
+    background-color: rgba(11, 11, 79, 0.774);
+    border-radius: 5px;
+    border: none;
+   
+}
+.ajouter-btn a{
+    text-decoration: none;
+    color: white;
+}
+.table-container {
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.table-header, .table-row {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-header {
+    background-color: #a4a1a1d3;
+    
+}
+
+.cell {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+   
+}
+.cell input{
+    width: 100px;
+}
+.cell.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.update, .delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update {
+    background-color: #555;
+    color: #fff;
+}
+.update  a{
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+}
+
+.delete {
+    background-color: #c60606;
+    color: #fff;
+    
+}
+.delete  a{
+    background-color: #c60606;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .table-header, .table-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-admin {
+       
+       width: 100%;
+       display: flex;
+       justify-content: end;
+    }
+    .header-admin p{
+        display: none;
+    }
+    
+   
+    .cell {
+        width: 100%;
+        text-align: left;
+        padding: 5px;
+    }
+
+    .cell.action-buttons {
+        justify-content: flex-start;
+    }
+    .filters {
+        flex-direction: column;
+    }
+    .header-admin {
+       
+        width: 100%;
+        display: flex;
+        justify-content: end;
+     }
+     .header-admin p{
+         display: none;
+     }
+     
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    th, td {
+        text-align: right;
+        padding-left: 50%;
+    }
+
+    th::before, td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+
+    th {
+        text-align: left;
+    }
+}
+
