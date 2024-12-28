@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="prof.css">
+    <link rel="stylesheet" href="css/stagaire.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,8 +14,10 @@ include '../php/connexion.php';
 // Start the session
 session_start(); 
 
-$Fname = $_SESSION['type']['First_name'];
-$Lname = $_SESSION['type']['last_name'];
+$Fname = $_SESSION['type']['Nom'];
+$Lname = $_SESSION['type']['Prenom'];
+
+
 
 $sql = "SELECT * FROM `users` JOIN Prof ON users.User_id = Prof.User_id Where `Role` =? ";
 
@@ -30,7 +32,7 @@ $sql = "SELECT * FROM `users` JOIN Prof ON users.User_id = Prof.User_id Where `R
 
     
         <header>
-            <img src="../img/logo.png" alt="Logo" class="logo">
+            <img src="../img/logo/lg3.png" alt="" class="logo">
             <div class="header-admin">
                 <p>Opérateur de saisie - Année Scolaire: <select id="year-select">
                     <option value="2023-2024">2023-2024</option>
@@ -52,12 +54,15 @@ $sql = "SELECT * FROM `users` JOIN Prof ON users.User_id = Prof.User_id Where `R
                         <i class="fa-solid fa-angle-down"></i>
                     </span>
                     <div id="nav-systeme">
-                      <p> <a href=""><i class="fa-solid fa-gear"></i>  Ajoute Année Scolaire</a></p>
-                      <p> <a href=""><i class="fa-solid fa-gear"></i>Ajoute de modules</a></p>
-                      <p> <a href=""><i class="fa-solid fa-gear"></i>Ajoute de Matieres</a></p>
-                      <p> <a href=""><i class="fa-solid fa-gear"></i>Ajoute de Matieres</a></p>
+                    <p><a href="#"><i class="fa-solid fa-gear"></i> Ajouter  Année Scolaire</a></p>
+                <p><a href="./ajouter/Insert/matiere.php"><i class="fa-solid fa-gear"></i> Ajouter une Matière</a></p>
+                <p><a href="./ajouter/Insert/Class.php"><i class="fa-solid fa-gear"></i> Ajouter une Classe</a></p>
+                <p><a href="./ajouter/Insert/Filliere.php"><i class="fa-solid fa-gear"></i> Ajouter une Filliere</a></p>
+                <p><a href="./ajouter/Insert/Option.php"><i class="fa-solid fa-gear"></i> Ajouter une Option</a></p>
+                <p><a href="./ajouter/Insert/Niveau.php"><i class="fa-solid fa-gear"></i> Ajouter un Niveau</a></p>
+
                       <div class="deconexion">
-                        <a href=""><i class="fa-solid fa-right-from-bracket"></i>Deconnecion</a> 
+                      <a href="deconnexion.php" name="Déconnexion"><i class="fa-solid fa-right-from-bracket"></i>Déconnexion</a>  
                       </div>
                     </div>
                 </div>
@@ -105,48 +110,10 @@ $sql = "SELECT * FROM `users` JOIN Prof ON users.User_id = Prof.User_id Where `R
                     </div>
                     <button class="ajouter-btn" id="ajoute"><a href="../template-admin/ajouterprof.php">ajoute</a></button>
                 </div>
-            </div>
+            
             <div class="table-container">
-                <table>
-                    <thead>
-                        <tr> 
-                            <th>N</th>
-                            <th>Nom</th>
-                            <th>Prenom</th>
-                            <th>date Naissance</th>
-                            <th>HireDate</th>
-                            <th>CoursesTaught</th>
-                            <th>Department</th>
-                            <th>login</th>
-                            <th>password</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php  $table = 1 ;?>
-                        <?php foreach($info as $inf): ?>
-                        <tr>
-                            <?php $User_id=$inf['User_id']?>
-                            <td><?php echo $table++ ?></td>
-                            <td><?= $inf['First_name'] ?></td>
-                            <td><?= $inf['last_name'] ?></td>
-                            <td><?= $inf['Date_naissance'] ?></td>
-                            <td><?= $inf['HireDate'] ?></td>
-                            <td><?= $inf['CoursesTaught'] ?></td>
-                            <td><?= $inf['Department'] ?></td>
-                            <td><?= $inf['User_id'] ?></td>
-                            <td><?= $inf['Password'] ?></td>
-                            <td>
-                                <button class="update"><a href="update.php?User_id=<?php echo $User_id ?>">update</a></button>
-                                <button class="delete"><a href="delete.php?User_id=<?php echo $User_id ?>" onclick="return confirm ('Êtes-vous sûr de vouloir supprimer ceci ?')">delete</a></button>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                        
-                    </tbody>
-                </table>
             </div>
-        </div> 
+            </div> </div> 
         <script src="../fromwoke/jquery-3.7.1.min.js"></script>
         <script src="../js/jus.js"></script>
 </body>

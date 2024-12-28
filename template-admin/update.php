@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de stagiaire</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="inscription.css">
+    <link rel="stylesheet" href="css/inscription.css">
 </head>
 <body>
 <?php
@@ -14,8 +14,8 @@ include '../php/connexion.php';
 // Start the session
 session_start(); 
 
-$Fname = $_SESSION['type']['First_name'];
-$Lname = $_SESSION['type']['last_name'];
+$Fname = $_SESSION['type']['Nom'];
+$Lname = $_SESSION['type']['Prenom'];
 // Retrieve and sanitize form input
 $User_id=$_GET['User_id'];
 
@@ -111,7 +111,7 @@ if (isset($_POST['update'])) {
 
 <div class="container">
     <header>
-        <img src="../img/logo.png" alt="Logo" class="logo">
+        <img src="../img/logo/lg3.png" alt="Logo" class="logo">
         <div class="header-admin">
             <p>Opérateur de saisie - Année Scolaire: 
                 <select id="year-select">
@@ -122,25 +122,28 @@ if (isset($_POST['update'])) {
             <div class="profile">
                 <img src="<?php 
 
-// Determine the appropriate image based on the user's gender
-if ($_SESSION['type']['Genre'] == 'homme') {
-    // If the user is a man, use the user.jpeg image
-    echo '../img/ph-scoliare/user/man.png';
-} else if ($_SESSION['type']['Genre'] == 'femme') {
-    // If the user is a woman, use the lic.jpg image
-    echo '../img/ph-scoliare/user/women.png';
-} 
-?>" alt="Admin" class="profile-pic">
+                    // Determine the appropriate image based on the user's gender
+                    if ($_SESSION['type']['Genre'] == 'homme') {
+                        // If the user is a man, use the user.jpeg image
+                        echo '../img/ph-scoliare/user/man.png';
+                    } else if ($_SESSION['type']['Genre'] == 'femme') {
+                        // If the user is a woman, use the lic.jpg image
+                        echo '../img/ph-scoliare/user/women.png';
+                    } 
+                    ?>" alt="Admin" class="profile-pic">
                 <span id="name">
                     <i class="fa-solid fa-angle-down"></i>
                 </span>
                 <div id="nav-systeme">
-                    <p><a href="#"><i class="fa-solid fa-gear"></i> Ajouter Année Scolaire</a></p>
-                    <p><a href="#"><i class="fa-solid fa-gear"></i> Ajouter des Modules</a></p>
-                    <p><a href="#"><i class="fa-solid fa-gear"></i> Ajouter des Matières</a></p>
-                    <p><a href="#"><i class="fa-solid fa-gear"></i> Ajouter des Matières</a></p>
+                <p><a href="./ajouter/Insert/AnneScolaire.php"><i class="fa-solid fa-gear"></i> Ajouter  Année Scolaire</a></p>
+                <p><a href="./ajouter/Insert/matiere.php"><i class="fa-solid fa-gear"></i> Ajouter une Matière</a></p>
+                <p><a href="./ajouter/Insert/Class.php"><i class="fa-solid fa-gear"></i> Ajouter une Classe</a></p>
+                <p><a href="./ajouter/Insert/Filliere.php"><i class="fa-solid fa-gear"></i> Ajouter une Filliere</a></p>
+                <p><a href="./ajouter/Insert/Option.php"><i class="fa-solid fa-gear"></i> Ajouter une Option</a></p>
+                <p><a href="./ajouter/Insert/Niveau.php"><i class="fa-solid fa-gear"></i> Ajouter un Niveau</a></p>
+
                     <div class="deconexion">
-                        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a> 
+                    <a href="deconnexion.php" name="Déconnexion"><i class="fa-solid fa-right-from-bracket"></i>Déconnexion</a> 
                     </div>
                 </div>
             </div>
@@ -153,15 +156,15 @@ if ($_SESSION['type']['Genre'] == 'homme') {
                     <li class="img-admin">
                     <img src="<?php 
 
-// Determine the appropriate image based on the user's gender
-if ($_SESSION['type']['Genre'] == 'homme') {
-    // If the user is a man, use the user.jpeg image
-    echo '../img/ph-scoliare/user/man.png';
-} else if ($_SESSION['type']['Genre'] == 'femme') {
-    // If the user is a woman, use the lic.jpg image
-    echo '../img/ph-scoliare/user/women.png';
-} 
-?>
+                        // Determine the appropriate image based on the user's gender
+                        if ($_SESSION['type']['Genre'] == 'homme') {
+                            // If the user is a man, use the user.jpeg image
+                            echo '../img/ph-scoliare/user/man.png';
+                        } else if ($_SESSION['type']['Genre'] == 'femme') {
+                            // If the user is a woman, use the lic.jpg image
+                            echo '../img/ph-scoliare/user/women.png';
+                        } 
+                        ?>
                     " alt="">
                         <p><?= htmlspecialchars($Fname . ' ' . $Lname) ?></p>
                     </li>

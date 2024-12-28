@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suivi des Notes</title>
-    <link rel="stylesheet" href="notesprof.css">
+    <link rel="stylesheet" href="css/notesprof.css">
 </head>
 <body><header>
     <div class="logo">
-        <img src="../img/logo.png" alt="Logo" id="img-logo">
+        <img src="../img/logo/lg3.png" alt="Logo" id="img-logo">
     </div>
     <div class="user">
         <div class="notification">
             <a href="#" class="fa-solid fa-bell" id="notifictaion"></a>
         </div>
         <div class="img-person">
-            <img src="../img/ph-scoliare/me.jpg" alt="User Image">
+            <img src="
+            <?php 
+            // Determine the appropriate image based on the user's gender
+            if ($_SESSION['type']['Genre'] == 'homme') {
+                // If the user is a man, use the user.jpeg image
+                echo '../img/ph-scoliare/user/man.png';
+            } else if ($_SESSION['type']['Genre'] == 'femme') {
+                // If the user is a woman, use the lic.jpg image
+                echo '../img/ph-scoliare/user/women.png';
+            }                
+                ?>" alt="User Image">
         </div>
         <div class="deconnexion">
-            <a href="#">Deconnexion</a>
+            <a href="../template-admin/deconnexion.php">Deconnexion</a>
         </div>
     </div>
 </header>
@@ -27,18 +37,18 @@
     <nav id="navbar" >
         <div class="nav-items">
             <a href="./home.php">
-                <img src="../img/icons-nav/home.png" alt="">
+                <img src="../img/icons-nav/main.png" alt="">
                 <span id="main-meun">Home</span>
             </a>
         </div>
         <div class="nav-items">
-            <a href="?">
+            <a href="../template_stagaire/grads.php">
                 <img src="../img/icons-nav/notes.png" alt="">
                 <span id="main-meun">Notes</span>
             </a>
         </div>
         <div class="nav-items">
-            <a href="?">
+            <a href="../template/reclamation.php">
                 <img src="../img/icons-nav/contact.png" alt="">
                 <span id="main-meun">Reclamation</span>
             </a>

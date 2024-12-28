@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 let images = [
-    '../img/G-stagaire.png',
+    '../img/icons-nav/Licenece pro.png',
     '../img/logo.png',
     '../img/lic.jpg'
 ];
@@ -43,3 +43,12 @@ setInterval(changeImage, 5000);
 
 
 
+ // Function to toggle the visibility of the table
+ function toggleTable() {
+    const tableContainer = document.getElementById('table-container');
+    if (tableContainer.style.display === 'none' || tableContainer.style.display === '') {
+        tableContainer.style.display = 'block';
+    } else {
+        tableContainer.style.display = 'none';
+    }
+}

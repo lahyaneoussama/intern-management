@@ -1,16 +1,21 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    background-color: #f2f2f2;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: #170b71;
     border-bottom: 1px solid #ddd;
     height: 50px;
@@ -18,9 +23,24 @@ header {
 }
 
 .logo {
-    height: 60px;
-    width: 70px;
+    height: 70px;
+    width: 125px;  
 }
+
+.img-admin{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: none;
+}
+.img-admin img{
+    height: 80px;
+    width: 80px;
+    border-radius:50% ;
+    margin: auto;
+}
+
 
 .header-admin{
     width: 500px;
@@ -46,17 +66,19 @@ header {
     border-radius: 50%;
     margin-right: 10px;
 }
+
 #nav-systeme{
     z-index: 100;
     display: none;
     position: absolute;
-    top: 72px;
-    right: 5px;
-    height: 200px;
+    top: 75px;
+    right: 1px;
+    height: 255px;
     width: 190px;
     background-color: rgb(241, 239, 239);
     box-shadow:  0 0 1px 1px rgb(255, 255, 255);
 }
+
 #nav-systeme a i{
     padding-right: 10px;
 }
@@ -73,16 +95,16 @@ header {
 }
 .deconexion{
     background-color: rgba(255, 0, 0, 0.854);
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: 5px;  
+    padding: 7px;
+    margin: 2px;  
 }
 .deconexion a{
     color: white;
     text-decoration: none;
      margin-left: 10px;
 
-}aside nav ul li a {
+}
+aside nav ul li a {
     padding: 10px 0;
     border-bottom: 1px solid rgba(128, 128, 128, 0.386);
     cursor: pointer;
@@ -94,15 +116,7 @@ header {
     display: flex;
 }
 
-aside {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height:100vh;
-    background-color: #170b71;
-    padding: 10px 20px;
-    border-right: 1px solid #ddd;
-}
+
 .img-admin{
     height: 100px;
     display: flex;
@@ -123,7 +137,15 @@ aside {
     
     
 }
-
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height:100vh;
+    background-color: #170b71;
+    padding: 10px 20px;
+    border-right: 1px solid #ddd;
+}
 aside nav ul {
     list-style: none;
     padding: 0;
@@ -145,18 +167,25 @@ aside button {
     border: none;
     cursor: pointer;
 }
+aside button a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
 .content-page {
     width: 90%;
     position: relative;
     margin-top: 20px;
-    margin:  10px auto;
+    margin:10px auto;
     
 }
 .container-header {
     max-width: 100%;
     margin: 20px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;background-color: #f4f4f4;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding-bottom: 40px;
 }
 
 .header-info {
@@ -171,6 +200,7 @@ aside button {
 .notes-header {
     margin-top:  10px;
     padding: 20px;
+    
 }
 
 .notes-header h2 {
@@ -178,52 +208,95 @@ aside button {
     margin-top:  10px;
     padding: 10px;
     border-radius: 10px 10px 0 0;
-    background-color: #979494ed;
+    background-color: #051957c3;
+    color: rgb(254, 254, 254);
 }
 
 .filter-container {
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 160px;
-}
-.inptrech{
-     width: 240px;
-     height: 28px;
-     margin-top:22px;
-     border-radius: 5px;
-     padding-left: 10px;
-     border: 1px solid rgba(128, 128, 128, 0.315);
-     background-color: rgba(128, 123, 123, 0.44);
+     
+
+    
+   
 }
 
+
+.fillier {
+    display: flex;
+    flex-direction: column;
+}
+.rech{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.rech label {
+    margin-bottom: 5px;
+    
+}
+
+.rech .one  select {
+    padding: 5px;
+    font-size: 16px;
+    width: 160px;
+    
+}
+.rech .two select {
+    padding: 5px;
+    font-size: 16px;
+    width: 150px;
+    
+}
+.inptrech{
+    width: 250px;
+    padding: 7px;
+    border-radius: 5px;
+    border:1px solid #051957c3;
+    outline: none;
+}
+.search-btn:hover{
+    background-color: #05195789;
+}
 .search-btn {
-    height: 34px;
-    width: 51px;
+    padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
-    background-color: rgba(11, 11, 79, 0.774);
+    background-color: #051957c3;
     border-radius: 5px;
     border: none;
 }
 .ajouter-btn {
-    padding: 5px 15px;
+    padding:12px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 25px;
-    background-color: rgba(11, 11, 79, 0.774);
+
+    background-color: #051957c3;
     border-radius: 5px;
-    border: none;
-   
+    border: none;  
+}
+.ajouter-btn:hover {
+    background-color: #051957a5;
+    
 }
 .ajouter-btn a{
+    padding: 10px 20px;
     text-decoration: none;
     color: white;
+    font-weight: 600;
+
 }
+
 .table-container {
     width: 95%;
     margin: auto;
     border-collapse: collapse;
+    
 }
 
 .table-header, .table-row {
@@ -263,36 +336,59 @@ table {
     margin-top: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    
 }
 
 thead {
-    background-color: #f0f0f0;
+    background-color: #051957c3;
+    color: white;
+    font-weight: bold;
+    
 }
 
-th, td {
+th{
     padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #0000007e;
 }
+td {
+    text-align: center;
+    border: 1px solid #0000007e;
+    background-color: rgba(61, 61, 61, 0.139);
+    
+}
+
 
 .action-buttons {
     display: flex;
     gap: 10px;
+    background-color: firebrick;
 }
 
 .update, .delete {
-    padding: 5px 10px;
+    padding: 8px 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
+    
+    
 }
 
 .update {
-    background-color: #555;
+    background-color: #116302;
     color: #fff;
+    
+}
+
+.update:hover {
+    background-color: #116302d4;
+    color: #fff;
+    
 }
 .update  a{
-    background-color: #555;
+   
     color: #fff;
     text-decoration: none;
 }
@@ -302,12 +398,15 @@ th, td {
     color: #fff;
     
 }
+.delete:hover {
+    background-color: #f80404d1;
+    color: #ff0000;   
+}
+
 .delete  a{
-    background-color: #c60606;
     color: #fff;
     text-decoration: none;
 }
-
 
 
 /* Responsive styles */

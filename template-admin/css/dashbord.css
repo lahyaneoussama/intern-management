@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,10 +13,9 @@ body {
 
 header {
     display: flex;
-   
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: #170b71;
     border-bottom: 1px solid #ddd;
     height: 50px;
@@ -23,8 +23,8 @@ header {
 }
 
 .logo {
-    height: 60px;
-    width: 70px;
+    height: 70px;
+    width: 125px;  
 }
 
 .header-admin{
@@ -55,9 +55,9 @@ header {
     z-index: 100;
     display: none;
     position: absolute;
-    top: 72px;
-    right: 5px;
-    height: 200px;
+    top: 75px;
+    right: 1px;
+    height: 255px;
     width: 190px;
     background-color: rgb(241, 239, 239);
     box-shadow:  0 0 1px 1px rgb(255, 255, 255);
@@ -74,16 +74,14 @@ header {
 #nav-systeme p a{
     font-size: 13px;
     color: black;
-    border-bottom: 1px solid rgba(186, 185, 185, 0.612);
+    border-bottom: 1px solid rgba(217, 174, 0, 0.612);
 }
-
-
 .deconexion{
     background-color: rgba(255, 0, 0, 0.854);
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: 5px;  
+    padding: 7px;
+    margin: 2px;  
 }
+
 .deconexion a{
     color: white;
     text-decoration: none;
@@ -121,6 +119,7 @@ aside nav ul li a {
     width: 200px;
     text-align: center;   
 }
+
 aside {
     display: flex;
     flex-direction: column;
@@ -143,15 +142,23 @@ aside nav ul li {
 }
 
 
-aside button {
+aside button  {
     margin-top: 20px;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
+    
 }
 
+aside button a  {
+    
+color: white;
+font-weight: 600;
+text-decoration: none;
+    
+}
 main {
     flex-grow: 1;
     padding: 20px;
@@ -177,6 +184,7 @@ main h1{
     border: 1px solid #ddd;
     border-radius: 5px;
     flex: 1;
+    font-weight: 700;
     
 }
 .stat-garcon {
@@ -219,7 +227,13 @@ main h1{
 
 }
 
-
+.stat-stagaire,
+.stat-garcon,
+.stat-filles,
+.stat-prof,
+p {
+    font-weight: bold;
+}
 .stat-stagaire,
 .stat-garcon,
 .stat-filles,
@@ -236,10 +250,10 @@ span {
     border-radius: 5px 5px 0 0;
 }
 h2{
-    background-color: rgb(182, 182, 186);
+    background-color: #051957c3;
     padding-left: 20px;
     padding: 7px;
-    color: rgba(27, 26, 26, 0.893);
+    color: rgb(255, 255, 255);
     border-radius: 5px 5px 0 0;
  }
 table {
@@ -249,12 +263,27 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #6e6e6e;
 }
-
+th{
+    background-color: #051957c3;
+    color: white;
+}
 th, td {
     padding: 10px;
     text-align: left;
+}
+
+.profil {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+.profil a {
+   font-weight: 600;
+    color: white;
+    text-decoration: none;
+   
 }
 
 

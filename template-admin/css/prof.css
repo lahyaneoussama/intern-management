@@ -16,23 +16,9 @@ header {
     height: 50px;
     color: white;
 }
-.img-admin{
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    border: none;
-}
-.img-admin img{
-    height: 80px;
-    width: 80px;
-    border-radius:50% ;
-    margin: auto;
-}
-
 .logo {
-    height: 60px;
-    width: 70px;
+    height: 70px;
+    width: 125px;  
 }
 
 .header-admin{
@@ -63,9 +49,9 @@ header {
     z-index: 100;
     display: none;
     position: absolute;
-    top: 72px;
-    right: 5px;
-    height: 200px;
+    top: 75px;
+    right: 1px;
+    height: 255px;
     width: 190px;
     background-color: rgb(241, 239, 239);
     box-shadow:  0 0 1px 1px rgb(255, 255, 255);
@@ -86,17 +72,15 @@ header {
 }
 .deconexion{
     background-color: rgba(255, 0, 0, 0.854);
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: 5px;  
+    padding: 7px;
+    margin: 2px;   
 }
 .deconexion a{
     color: white;
     text-decoration: none;
      margin-left: 10px;
 
-}
-aside nav ul li a {
+}aside nav ul li a {
     padding: 10px 0;
     border-bottom: 1px solid rgba(128, 128, 128, 0.386);
     cursor: pointer;
@@ -108,7 +92,15 @@ aside nav ul li a {
     display: flex;
 }
 
-
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height:100vh;
+    background-color: #170b71;
+    padding: 10px 20px;
+    border-right: 1px solid #ddd;
+}
 .img-admin{
     height: 100px;
     display: flex;
@@ -129,15 +121,7 @@ aside nav ul li a {
     
     
 }
-aside {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height:100vh;
-    background-color: #170b71;
-    padding: 10px 20px;
-    border-right: 1px solid #ddd;
-}
+
 aside nav ul {
     list-style: none;
     padding: 0;
@@ -163,7 +147,7 @@ aside button {
     width: 90%;
     position: relative;
     margin-top: 20px;
-    margin:10px auto;
+    margin:  10px auto;
     
 }
 .container-header {
@@ -200,31 +184,22 @@ aside button {
     justify-content: space-between;
     align-items: center;
     margin-left: 160px;
-   
 }
-.rech {
-   background-color: blue;
-}
-
-.filter {
-    display: flex;
-    flex-direction: column;
-}
-
-.filter label {
-    margin-bottom: 5px;
-}
-
-.filter select {
-    padding: 5px;
-    font-size: 16px;
+.inptrech{
+     width: 240px;
+     height: 28px;
+     margin-top:22px;
+     border-radius: 5px;
+     padding-left: 10px;
+     border: 1px solid rgba(128, 128, 128, 0.315);
+     background-color: rgba(128, 123, 123, 0.44);
 }
 
 .search-btn {
-    padding: 5px 10px;
+    height: 34px;
+    width: 51px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 25px;
     background-color: rgba(11, 11, 79, 0.774);
     border-radius: 5px;
     border: none;

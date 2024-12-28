@@ -1,30 +1,28 @@
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    
-   
-    header {
-        height: 9%;
-        width: 100%;
-        background-color: rgba(3, 3, 146, 0.849);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-        
-    }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    header .logo {
-        height: 65px;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 23, 128, 0.938);
+    border-bottom: 1px solid #ddd;
+    height: 75px;
+    color: white;
     
-    header .logo img {
-        height: 100%;
-        cursor: pointer;
-    }
-    
+}
+
+header .logo img {
+    height: 70px;
+    width: 125px; 
+   
+}
+
+
     header .user {
         display: flex;
         align-items: center;
@@ -378,6 +376,10 @@
         border-bottom: none;
     }
     
+    .notes{
+       
+        padding: 10px;
+    }
     .note-title {
         font-weight: bold;
         color: #0277bd;
@@ -408,16 +410,16 @@
         width: 100%;
         height: 150px;
         display: flex;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e1e1e1;
+        border-radius: 10px;
     }
     
 
     .Licene{
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 65%;
-        border-radius: 10px;
-        border: 1px solid #e1e1e1;
+        width:97%;
         display: flex;
+        justify-content: space-between;
     }
     
     .Licene img{
@@ -430,16 +432,22 @@
         text-align: center;
         margin-top: 60px;
     }
-
+    .Lic-img{
+        display: flex;
+        justify-content: space-between;
+    }
     .Licene button{
-        margin-left: 20px;
+        
         width: 120px;
         height: 40px;
         background-color: rgba(3, 79, 107, 0.849);
         border: 1px solid rgba(128, 128, 127, 0.687);
         border-radius: 10px;
         margin-top: 50px;
-        margin-left: 100px;
+        
 
-       
+    }
+    .Licene button a{
+        text-decoration: none;
+        color: white;
     }

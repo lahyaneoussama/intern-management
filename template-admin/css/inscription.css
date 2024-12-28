@@ -1,0 +1,266 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #170b71;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    color: white;
+}
+.logo {
+    height: 70px;
+    width: 125px;  
+}
+
+.header-admin{
+    width: 500px;
+    
+    display: flex;
+    justify-content: space-around;
+}
+.header-admin p select{
+    background-color: rgb(33, 81, 30);
+    padding:5px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid rgb(190, 190, 190) ;
+    color: white;
+}
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#nav-systeme{
+    z-index: 100;
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 1px;
+    height: 255px;
+    width: 190px;
+    background-color: rgb(241, 239, 239);
+    box-shadow:  0 0 1px 1px rgb(255, 255, 255);
+}
+#nav-systeme a i{
+    padding-right: 10px;
+}
+#nav-systeme a {
+    padding:10px 10px;
+    text-decoration: none;
+   
+   
+}
+#nav-systeme p a{
+    font-size: 13px;
+    color: black;
+    border-bottom: 1px solid rgba(186, 185, 185, 0.612);
+}
+.deconexion{
+    background-color: rgba(255, 0, 0, 0.854);
+    padding: 7px;
+    margin: 2px;  
+}
+.deconexion a{
+    color: white;
+    text-decoration: none;
+     margin-left: 10px;
+
+}
+
+.content{
+    display: flex;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #170b71;
+    padding: 10px 20px;
+    border-right: 1px solid #ddd;
+}
+.img-admin{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: none;
+}
+.img-admin img{
+    height: 80px;
+    width: 80px;
+    border-radius:50% ;
+    margin: auto;
+}
+
+.img-admin p{
+    width: 200px;
+    text-align: center;
+    
+    
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside nav ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.386);
+    cursor: pointer;
+    color: white;
+}
+aside nav ul li a {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.386);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+
+aside button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    background-color: #fff;   
+}
+
+.start{
+    display: flex;
+    gap: 70px;
+    width: 90%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    
+} 
+
+.info{
+    width: 45%;
+    
+}
+
+.registration-form h2 {
+    width: 90%;
+    margin-bottom: 20px;
+    background-color: #170b71;
+    color: white;
+    padding: 10px 15px; 
+    border-radius: 10px 10px 0 0;
+}
+
+.registration-form p {
+    width: 90%;
+    margin-left: 10px;
+    color: red;
+    
+}
+
+.registration-form label {
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.registration-form input,
+.registration-form textarea,
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.registration-form select{
+    width: 105%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.registration-form textarea {
+    width: calc(100% - 10px);
+}
+.registration-form .annule{
+    width: auto;
+    background-color: #a52418;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 20px auto ;
+}
+.registration-form .valider {
+    width: auto;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 20px auto ;
+}
+
+
+.registration-form button:hover {
+    background-color: #218838;
+}
+
+
+
+@media (max-width: 768px) {
+    .registration-form label,
+    .registration-form input,
+    .registration-form select,
+    .registration-form textarea {
+        width: 100%;
+    }
+    .header-admin {
+       
+        width: 100%;
+        display: flex;
+        justify-content: end;
+     }
+     .header-admin p{
+         display: none;
+     }
+}
+

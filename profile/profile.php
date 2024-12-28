@@ -10,7 +10,7 @@
 
     <header>
         <div class="logo">
-            <img src="../img/logo.png" alt="Logo" id="img-logo">
+            <img src="../img/logo/lg3.png" alt="Logo" id="img-logo">
         </div>
         <div class="user">
             <div class="notification">
@@ -28,7 +28,7 @@
 
         <nav id="navbar" >
             <div class="nav-items">
-                <a href="../template_stagaire/home.php">
+                <a href="../template_stagaire/main.php">
                     <img src="../img/icons-nav/home.png" alt="">
                     <span id="main-meun">Home</span>
                 </a>
@@ -40,7 +40,7 @@
                 </a>
             </div>
             <div class="nav-items">
-                <a href="../template/reclamation.html">
+                <a href="../template/reclamation.php">
                     <img src="../img/icons-nav/contact.png" alt="">
                     <span id="main-meun">Reclamation</span>
                 </a>
@@ -89,7 +89,7 @@
                </main>
             </div>
             <div class="nav-items">
-                <a href="../profile/profile.html">
+                <a href="../profile/profile.php">
                     <img src="../img/icons-nav/user.png" alt="">
                     <span id="main-meun">Profile</span>
                 </a>

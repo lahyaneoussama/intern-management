@@ -3,32 +3,32 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f8fd;
+    background-color: #eef5fc;
 }
 
-/* Navigation bar styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    padding: 10px 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 15px 20px;
+    background-color: #051957c3;
+    box-shadow: 0 5px 10px 10px white;
+    border-bottom: 1px solid #595959;
+    height: 55px;
+    color: white;
+    
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-}
+
 
 header .logo img {
-    width: 70px;
-    height: 60px;
+    margin-top: 5px;
+    height: 70px;
+    width: 130px;
 }
+
+
+
 
 header nav ul {
     list-style: none;
@@ -42,13 +42,13 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: #051957c3;
     font-size: 1rem;
     transition: 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #0056b3;
+    color: #051957c3;
 }
 
 /* Main content styling */
@@ -67,7 +67,7 @@ header nav ul li a:hover {
 
 .text-content h1 {
     font-size: 2.5rem;
-    color: #007bff;
+    color: #051957c3;
     margin-bottom: 20px;
 }
 
@@ -79,7 +79,7 @@ header nav ul li a:hover {
 
 .text-content button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #051957c3;
     color: white;
     border: none;
     border-radius: 5px;
@@ -89,7 +89,7 @@ header nav ul li a:hover {
 }
 
 .text-content button:hover {
-    background-color: #0056b3;
+    background-color: #051957c3;
 }
 
 /* Image container styling */
@@ -102,34 +102,35 @@ header nav ul li a:hover {
 
 /* Form styling */
 .form {
-    margin-top: 60px;
+    margin-top: 55px;
     border-radius: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    
 }
 
 /* Form title */
 .form h4 {
     padding-left: 130px;
     font-size: 42px;
-    color: #007bff;
-    margin-top: 10px;
+    color: #051957c3;
+
 }
 
 /* Form styling */
 .form form {
     height: 270px;
     width: 380px;
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -30px;
 }
 
 /* Input fields styling */
 .form form input {
     width: 95%;
-    height: 32px;
+    height: 35px;
     border-radius: 5px;
     padding-left: 10px;
     margin-top: 20px;
@@ -137,27 +138,44 @@ header nav ul li a:hover {
     border: 0;
     outline: none;
 }
-
+.form form span  {
+    color: #051957c3;
+    width: 95%;
+    
+    
+}
 /* Link in the form */
 .form form span a {
     display: block;
-    padding-right: 15px;
+    padding-right: 17px;
     text-align: end;
-    padding-top: 5px;
     font-size: 14px;
-    color: #007bff;
+    color: #051957c3;
+    margin-right: 10px;
+    width: 100%;
 }
 
 /* Submit button styling */
 .form form #Connexion {
-    background-color: #007bff;
+    background-color: #051957c3;
     color: white;
 }
 
 /* Hover effect for the submit button */
 .form form #Connexion:hover {
-    background-color: #054e9c;
+    background-color: #051957c3;
     color: wheat;
+}
+
+.ofppt{
+    margin-top: 28px;
+    width: 100px;
+    height: 50px;
+}
+.ofppt img{
+    padding:5px 10px;
+    width: 60px;
+    height: 50px;
 }
 
 /* **Responsive Design for Small Screens (Mobile)** */

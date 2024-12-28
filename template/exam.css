@@ -6,23 +6,22 @@
 }
 
 header {
-    height: 9%;
-    width: 100%;
-    background-color: rgba(3, 3, 146, 0.849);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 15px 20px;
+    background-color: #170b71;
+    border-bottom: 1px solid #ddd;
+    height: 75px;
+    color: white;
     
 }
 
-header .logo {
-    height: 65px;
-}
+
 
 header .logo img {
-    height: 100%;
-    cursor: pointer;
+    height: 90px;
+    width: 130px;  
 }
 
 header .user {

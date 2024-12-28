@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de stagaire</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/dashbord.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-<?php
-        // Include database connection
-        include '../php/connexion.php';
+<?php // Include database connection
+        include '../php/connexion.php'; 
+
+        
+       
+    
         // Start the session
         session_start(); 
         
         $Fname = $_SESSION['type']['Nom'];
         $Lname = $_SESSION['type']['Prenom'];
         $fil = $_SESSION['str']['description'];
-
-        if($_POST['Role'] = 'Admin'){
+        
 
         $strinfo = "SELECT * FROM `users` 
         JOIN `stagaire` ON 
@@ -28,26 +30,14 @@
         
         $information = $info->fetchAll(PDO::FETCH_ASSOC);
         
-        }
-        ?>
+
+    ?>
     
     <div class="container">
     <header>
         <img src="../img/logo/lg3.png" alt="Logo" class="logo">
         <div class="header-admin">
-            <p>Opérateur de saisie - Année Scolaire: 
-            <select name="option" >                    
-                        <?php
-                        $MyAnne = "SELECT `id_AnneS`, `annee` FROM `anneescolaire`";
-                        $AnneS = $db->prepare($MyAnne);
-                        $AnneS->execute();
-                        $AnneScolaire = $AnneS->fetchAll(PDO::FETCH_ASSOC);
-                        foreach ($AnneScolaire as $AnSc):
-                        ?>
-                            <option value="<?= ($AnSc['id_AnneS']) ?>"><?= ($AnSc['annee']) ?></option>
-                        <?php endforeach; ?>
-                </select>
-            </p>
+            
             <div class="profile">
                 <img src="<?php 
 
@@ -60,21 +50,12 @@
                     echo '../img/ph-scoliare/user/women.png';
                 } 
                 ?>" alt="Admin" class="profile-pic">
-                <span id="name">
-                    <i class="fa-solid fa-angle-down"></i>
-                </span>
-                <div id="nav-systeme">
-                <p><a href="./ajouter/Insert/AnneScolaire.php"><i class="fa-solid fa-gear"></i> Ajouter  Année Scolaire</a></p>
-                <p><a href="./ajouter/Insert/matiere.php"><i class="fa-solid fa-gear"></i> Ajouter une Matière</a></p>
-                <p><a href="./ajouter/Insert/Class.php"><i class="fa-solid fa-gear"></i> Ajouter une Classe</a></p>
-                <p><a href="./ajouter/Insert/Filliere.php"><i class="fa-solid fa-gear"></i> Ajouter une Filliere</a></p>
-                <p><a href="./ajouter/Insert/Option.php"><i class="fa-solid fa-gear"></i> Ajouter une Option</a></p>
-                <p><a href="./ajouter/Insert/Niveau.php"><i class="fa-solid fa-gear"></i> Ajouter un Niveau</a></p>
-
+                
+    
                     <div class="deconexion">
-                        <a href="deconnexion.php" name="Déconnexion"><i class="fa-solid fa-right-from-bracket"></i>Déconnexion</a> 
+                        <a href="../template-admin/deconnexion.php" name="Déconnexion"><i class="fa-solid fa-right-from-bracket"></i>Déconnexion</a> 
                     </div>
-                </div>
+                
             </div>
         </div>
     </header>
@@ -94,7 +75,7 @@
                                 echo '../img/ph-scoliare/user/women.png';
                             } 
                             ?>
-                        " alt="">
+                    " alt="">
                     
                     <p><?=  $Fname .' '. $Lname ?></p></li>
                   <li><a href="home.php">Tableau de Bord</a></li>
@@ -229,7 +210,6 @@
     </thead>
     <tbody>
         <?php
-        if($_POST['Role'] ='Admin'){
         // Initialize row counter
         $row_count = 0;
 
@@ -252,7 +232,7 @@
             }
         }
 
-    }
+       
         ?>
     </tbody>
 </table>

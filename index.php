@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Classroom</title>
-    <link rel="stylesheet" href="./template_stagaire/login.css">
+    <link rel="stylesheet" href="./template_stagaire/css/login.css">
 </head>
 <body>
-<?php
-// Include database connection
+
+    <header>
+        <div class="logo"><img src="img/logo/lg3.png" alt=""></div>
+        
+    </header>
+
+    <!-- Main content -->
+    <section class="main-content">
+        <!-- Left section: Title and description -->
+        <div class="text-content">
+            <h1>MyTakwine</h1>
+            <p>Online education</p>
+            <p>Un système d'information intégré dédié à la gestion des stagiaires de l’OFPPT.
+                 Il permet le suivi des performances, l’évaluation des résultats et 
+                 l’organisation des données de manière efficace. Conçu pour répondre
+                 aux besoins des formateurs et des apprenants,
+                 ce système simplifie les processus administratifs tout en améliorant 
+                 l’expérience pédagogique grâce à une interface moderne et intuitive.</p>
+            <button>Learn more</button>
+        </div>
+
+        <!-- Right section: Image illustration -->
+        <div class="image-container">
+        <div class="form">
+
+<h4><span>Log</span>in</h4>
+<!-- Formulaire de connexion -->
+<form  method="post">
+    <!-- Champ de saisie pour le login et mot de passe -->
+    <span>
+        <?php
+               // Include database connection
 include 'php/connexion.php';
 
 // Check if the form has been submitted
@@ -21,7 +51,7 @@ if (isset($_POST['Connexion'])) {
     if (!empty($username) && !empty($pass)) {
         
         // Prepare SQL query
-        $sql = "SELECT * FROM `users` WHERE `User_id` = ? AND `Password` = ?";
+        $sql = "SELECT * FROM users WHERE User_id = ? AND Password = ?";
         $requete = $db->prepare($sql);
         
        
@@ -30,7 +60,7 @@ if (isset($_POST['Connexion'])) {
 
         $requete->execute();
 
-        $sql = "SELECT * FROM `filiere`";
+        $sql = "SELECT * FROM filiere";
         $requete1 = $db->prepare($sql);
         $requete1->execute();
         
@@ -56,57 +86,30 @@ if (isset($_POST['Connexion'])) {
                 exit(); 
             } else if ($user['Role'] == 'Stagaire') {
                 // Redirect to stagiaire page
-                header('Location:template_stagaire/home.php');
+                header('Location:template_stagaire/main.php');
                 exit();
             } else if ($user['Role'] == 'Prof') {
-               echo 'THIS IS PROF';
+                header('Location:template_prof/home.php');;
             } else {
                 echo 'Unknown user type '; }} else {
-                    echo 'Username or password incorrect';  }} else {
-                    echo 'Tous les champs sont obligatoires';
+                    echo '<p style="color:red">Username or password incorrect</p>';  }} else {
+                    echo '<p style="color:red">Tous les champs sont obligatoires</p>';
                      }};  
              
-             
-?>
-    <!-- Navigation bar -->
-    <header>
-        <div class="logo"><img src="img/logo.png" alt=""></div>
         
-    </header>
-
-    <!-- Main content -->
-    <section class="main-content">
-        <!-- Left section: Title and description -->
-        <div class="text-content">
-            <h1>StagiaireHub</h1>
-            <p>Online education</p>
-            <p>Un système d'information intégré dédié à la gestion des stagiaires de l’OFPPT.
-                 Il permet le suivi des performances, l’évaluation des résultats et 
-                 l’organisation des données de manière efficace. Conçu pour répondre
-                 aux besoins des formateurs et des apprenants,
-                 ce système simplifie les processus administratifs tout en améliorant 
-                 l’expérience pédagogique grâce à une interface moderne et intuitive.</p>
-            <button>Learn more</button>
+        ?>
+            </span>
+            <input type="text" id="username" name="username" placeholder="username"> <br>
+            <input type="password" id="pass" name="pass" placeholder="password"><br>
+            <span><a href="?">Forget Password?</a></span> <br>
+            <!-- Boutton de soumission du formulaire -->
+            <input type="submit" value="CONNEXION" id="Connexion" name="Connexion">
+        </form>
         </div>
-
-        <!-- Right section: Image illustration -->
-        <div class="image-container">
-        <div class="form">
-
-<h4><span>Log</span> in</h4>
-<!-- Formulaire de connexion -->
-<form  method="post">
-    <!-- Champ de saisie pour le login et mot de passe -->
-
-    <input type="text" id="username" name="username" placeholder="username"> <br>
-    <input type="password" id="pass" name="pass" placeholder="password"><br>
-    <!-- Lien pour le mot de passe oublié -->
-    <span><a href="?">Forget Password?</a></span> <br>
-    <!-- Boutton de soumission du formulaire -->
-    <input type="submit" value="CONNEXION" id="Connexion" name="Connexion">
-</form>
-</div>
         </div>
     </section>
+    <div class="ofppt">
+        <img src="img/logo/logo.png" alt="">
+    </div>
 </body>
 </html>

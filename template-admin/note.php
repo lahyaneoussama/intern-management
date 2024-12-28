@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="stagaire.css">
+    <link rel="stylesheet" href="css/stagaire.css">
     <title>Gestion de stagair</title>
 </head>
 <body>
@@ -14,11 +14,11 @@ include '../php/connexion.php';
 // Start the session
 session_start(); 
 
-$Fname = $_SESSION['type']['First_name'];
-$Lname = $_SESSION['type']['last_name']; ?>
+$Fname = $_SESSION['type']['Nom'];
+$Lname = $_SESSION['type']['Prenom']; ?>
     
         <header>
-            <img src="../img/logo.png" alt="Logo" class="logo">
+            <img src="../img/logo/lg3.png" alt="Logo" class="logo">
             <div class="header-admin">
                 <p>Opérateur de saisie - Année Scolaire: <select id="year-select">
                     <option value="2023-2024">2023-2024</option>
@@ -40,12 +40,15 @@ $Lname = $_SESSION['type']['last_name']; ?>
                         <i class="fa-solid fa-angle-down"></i>
                     </span>
                     <div id="nav-systeme">
-                      <p> <a href=""><i class="fa-solid fa-gear"></i>Ajoute Année Scolaire</a></p>
-                      <p> <a href=""><i class="fa-solid fa-gear"></i>Ajoute de modules</a></p>
-                      <p> <a href=""><i class="fa-solid fa-gear"></i>Ajoute de Matieres</a></p>
-                      <p> <a href=""><i class="fa-solid fa-gear"></i>Ajoute de Matieres</a></p>
+                    <p><a href="#"><i class="fa-solid fa-gear"></i> Ajouter  Année Scolaire</a></p>
+                <p><a href="./ajouter/Insert/matiere.php"><i class="fa-solid fa-gear"></i> Ajouter une Matière</a></p>
+                <p><a href="./ajouter/Insert/Class.php"><i class="fa-solid fa-gear"></i> Ajouter une Classe</a></p>
+                <p><a href="./ajouter/Insert/Filliere.php"><i class="fa-solid fa-gear"></i> Ajouter une Filliere</a></p>
+                <p><a href="./ajouter/Insert/Option.php"><i class="fa-solid fa-gear"></i> Ajouter une Option</a></p>
+                <p><a href="./ajouter/Insert/Niveau.php"><i class="fa-solid fa-gear"></i> Ajouter un Niveau</a></p>
+
                       <div class="deconexion">
-                        <a href=""><i class="fa-solid fa-right-from-bracket"></i>Deconnecion</a> 
+                      <a href="deconnexion.php" name="Déconnexion"><i class="fa-solid fa-right-from-bracket"></i>Déconnexion</a> 
                       </div>
                     </div>
                 </div>
@@ -79,68 +82,33 @@ $Lname = $_SESSION['type']['last_name']; ?>
                     
                 </ul>
             </nav>
-            <button>View Profile</button>
+            <button><a href="">View Profile</a></button>
         </aside>
     <div class="content-page" id="content-page">
         <div class="container-header">
             <div class="notes-header">
-                <h2> Notes</h2>
+            
+                <h2>Note</h2>
                 <div class="filter-container">
-                    <div class="filter">
-                        <label for="annee-scolaire">Fiellier</label>
-                        <select id="annee-scolaire">
-                        <?php
-                        $mysql = "SELECT filiere_id, filiere_name FROM `filiere`";
-                        $req = $db->prepare($mysql);
-                        $req->execute();
-                        $fillieres = $req->fetchAll(PDO::FETCH_ASSOC);
-                        foreach ($fillieres as $fil):
-                        ?>
-                            <option value="<?= ($fil['filiere_id']) ?>"><?= ($fil['filiere_name']) ?></option>
-                        <?php endforeach; ?>
-                            <!-- Add more options as needed -->
-                        </select>
+
+                    <div class="rech">
+                    <input type="text" name="inpt-rech" class="inptrech" placeholder="Rechercher">
+                    <button class="search-btn" id="search">🔍</button>
                     </div>
-                    <div class="filter">
-                        <label for="session">Annee</label>
-                        <select id="session">
-                            <option>Premier Annee</option>
-                            <option>deuixeme Annee</option>
-                            
-                            <!-- Add more options as needed -->
-                        </select>
-                    </div>
-                    <div class="filter">
-                        <label for="session">class</label>
-                        <select id="session">
-                            <?php
-                        $clas = "SELECT `class_id`,`class_name` FROM `class`";
-                        $req3 = $db->prepare($clas);
-                        $req3->execute();
-                        $classes = $req3->fetchAll(PDO::FETCH_ASSOC);
-                        foreach ($classes as $classe):
-                        ?>
-                            <option value="<?= $classe['class_id']?>"><?= $classe['class_name'] ?></option>
-                        <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <button class="search-btn" id="search" style="color:white">Rechercher 🔍</button>
-                 
                     
                 </div>
             </div>
+           
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Numero De Stagiaire</th>
-                            <th>Nom & Prenom</th>
-                            <th>date Naissance </th>
+                            <th>Nom et prénom</th>
+                            <th>date Naissance</th>
                             <th>Fiellier</th>
                             <th>Class</th>
-                            <th>Note 1er Année</th>
-                            <th>Note 2er Année</th>
-                        
+                            <th>Note Moyenne</th>
                             <th>Action</th>
                         </tr>
                     </thead>

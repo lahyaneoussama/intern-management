@@ -12,15 +12,24 @@ body {
 
 
 header {
-    height: 9%;
-    width: 100%;
-    background-color: rgba(3, 3, 146, 0.849);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 15px 20px;
+    background-color: #170b71;
+    border-bottom: 1px solid #ddd;
+    height: 75px;
+    color: white;
     
 }
+
+
+
+header .logo img {
+    height: 70px;
+    width: 125px; 
+}
+
 
 #nav-displye{
     background-color: rgba(233, 223, 223, 0.911);

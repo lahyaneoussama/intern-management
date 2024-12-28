@@ -8,8 +8,24 @@
 </head>
 <body>
     <header>
+    <?php // Include database connection
+        include '../php/connexion.php'; 
+
+        
+       
+    
+        // Start the session
+        session_start(); 
+        
+        $Fname = $_SESSION['type']['First_name'];
+        $Lname = $_SESSION['type']['last_name'];
+        $fil = $_SESSION['str']['description'];
+        
+
+       
+        ?>
         <div class="logo">
-            <img src="../img/logo.png" alt="Logo" id="img-logo">
+            <img src="../img/logo/lg3.png" alt="Logo" id="img-logo">
         </div>
         <div class="user">
             <div class="notification">
@@ -26,19 +42,19 @@
     <div class="home-content" id="homecontact">
         <nav id="navbar" >
             <div class="nav-items">
-                <a href="../template_stagaire/home.php">
+                <a href="../template_stagaire/main.php">
                     <img src="../img/icons-nav/home.png" alt="">
                     <span id="main-meun">Home</span>
                 </a>
             </div>
             <div class="nav-items">
-                <a href="../template_stagaire/notes.html">
+                <a href="../template_stagaire/grads.php">
                     <img src="../img/icons-nav/notes.png" alt="">
                     <span id="main-meun">Notes</span>
                 </a>
             </div>
             <div class="nav-items">
-                <a href="../template/reclamation.html">
+                <a href="../template/reclamation.php">
                     <img src="../img/icons-nav/contact.png" alt="">
                     <span id="main-meun">Reclamation</span>
                 </a>
@@ -98,7 +114,7 @@
                 <p>Bienvenue sur votre compte privé</p>
             </div>
             <div class="container">
-                <h1>Bonjour Oussama Lahyane</h1>
+                <h1>Bonjour <?=  $Fname .' '. $Lname ?></h1>
                 <div class="alert">
                     <span class="alert-icon">&#9888;</span>
                     <span class="alert-message">Cette fonctionnalité n'est pas disponible maintenant, merci</span>

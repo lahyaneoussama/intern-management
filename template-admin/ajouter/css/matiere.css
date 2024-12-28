@@ -1,11 +1,9 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background-color: #f2f2f2;
 }
-
 
 .container {
     display: flex;
@@ -13,11 +11,12 @@ body {
     height: 100vh;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: #170b71;
     border-bottom: 1px solid #ddd;
     height: 50px;
@@ -25,13 +24,12 @@ header {
 }
 
 .logo {
-    height: 60px;
-    width: 70px;
+    height: 70px;
+    width: 125px;  
 }
 
 .header-admin{
     width: 500px;
-    
     display: flex;
     justify-content: space-around;
 }
@@ -54,16 +52,19 @@ header {
     border-radius: 50%;
     margin-right: 10px;
 }
+
 #nav-systeme{
+    z-index: 100;
     display: none;
     position: absolute;
-    top: 72px;
-    right: 5px;
-    height: 200px;
+    top: 75px;
+    right: 1px;
+    height: 255px;
     width: 190px;
     background-color: rgb(241, 239, 239);
     box-shadow:  0 0 1px 1px rgb(255, 255, 255);
 }
+
 #nav-systeme a i{
     padding-right: 10px;
 }
@@ -78,11 +79,12 @@ header {
     color: black;
     border-bottom: 1px solid rgba(186, 185, 185, 0.612);
 }
+
+
 .deconexion{
     background-color: rgba(255, 0, 0, 0.854);
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: 5px;  
+    padding: 7px;
+    margin: 2px;  
 }
 .deconexion a{
     color: white;
@@ -90,19 +92,19 @@ header {
      margin-left: 10px;
 
 }
+aside nav ul li a {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.386);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
 
 .content{
     display: flex;
 }
 
-aside {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    background-color: #170b71;
-    padding: 10px 20px;
-    border-right: 1px solid #ddd;
-}
+
 .img-admin{
     height: 100px;
     display: flex;
@@ -119,11 +121,18 @@ aside {
 
 .img-admin p{
     width: 200px;
-    text-align: center;
-    
-    
+    text-align: center;   
 }
 
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    background-color: #170b71;
+    padding: 10px 20px;
+    border-right: 1px solid #ddd;
+}
 aside nav ul {
     list-style: none;
     padding: 0;
@@ -135,120 +144,110 @@ aside nav ul li {
     cursor: pointer;
     color: white;
 }
-aside nav ul li a {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.386);
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-}
 
 
-aside button {
+aside .profile  {
     margin-top: 20px;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
-}
-.registration-form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 20px;
-    width: 80%;
-    margin: auto;
-    background-color: #fff; 
-
     
 }
-.start{
-    display: flex;
-    gap: 70px;
+
+ 
+/* Form Container */
+.form-container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(244, 240, 240, 0.1);
     width: 90%;
+    
+    
+}
+
+/* Heading */
+.form-container h1 {
+    font-size: 24px;
+    color: #f7f7f7;
+    background-color: #051957c3;
+    border-radius: 10px 10px 0 0;
     padding: 10px;
+
+}
+
+.form-container form{
+    background: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px 10px rgba(140, 138, 138, 0.1);
+    width: 100%;
     margin: auto;
-} .info{
-    width: 40%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: 25px;
+   
+    
 }
 
-.registration-form h2 {
-    width: 100%;
-    margin-bottom: 20px;
-}
 
-.registration-form p {
-    width: 100%;
+/* Label Styling */
+.form-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
     margin-bottom: 10px;
-    color: red;
 }
 
-.registration-form label {
-    width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-
-.registration-form input,
-.registration-form select,
-.registration-form textarea,
-.registration-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+/* Input and Textarea Styling */
+input{
+    width: 70%;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    margin: auto;
 }
 
-
-.registration-form textarea {
-    width: calc(100% - 10px);
+select{
+    width: 73%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    margin: auto;
 }
-.registration-form .annule{
-    width: auto;
-    background-color: #a73728;
-    color: white;
+
+input:focus {
+    border-color: #051957c3;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 73%;
+    padding: 12px;
+    background-color: #051957c3;
+    color: #fff;
+    font-size: 16px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    padding: 10px 20px;
-    width: 100%;
-    margin: 10px auto ;
-}
-.registration-form .valider {
-    width: auto;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    width: 100%;
-    margin: 20px auto ;
+    margin-top: 15px;
+ 
 }
 
-
-.registration-form button:hover {
-    background-color: #218838;
+.submit-btn:hover {
+    background-color: #051957c3;
 }
 
-
-
-@media (max-width: 768px) {
-    .registration-form label,
-    .registration-form input,
-    .registration-form select,
-    .registration-form textarea {
-        width: 100%;
-    }
-    .header-admin {
-       
-        width: 100%;
-        display: flex;
-        justify-content: end;
-     }
-     .header-admin p{
-         display: none;
-     }
+/* Placeholder Styling */
+input::placeholder {
+    color: #aaa;
 }
-

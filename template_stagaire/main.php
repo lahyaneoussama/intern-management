@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="homes.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <?php // Include database connection
         include '../php/connexion.php'; 
@@ -17,18 +17,23 @@
         // Start the session
         session_start(); 
         
-        $Fname = $_SESSION['type']['First_name'];
-        $Lname = $_SESSION['type']['last_name'];
+        $Fname = $_SESSION['type']['Prenom'];
+        $Lname = $_SESSION['type']['Nom'];
         $fil = $_SESSION['str']['description'];
-        
 
+            $sql = "SELECT * FROM notes limit 4";
+            $requete = $db->prepare($sql);
+        
+            $requete->execute();
+            $info = $requete->fetchAll(PDO::FETCH_ASSOC);
+        
        
         ?>
 
 <body>
     <header>
         <div class="logo">
-            <img src="../img/logo.png" alt="Logo" id="img-logo">
+            <img src="../img/logo/lg3.png" alt="Logo" id="img-logo">
         </div>
         <div class="user">
             <div class="notification">
@@ -48,7 +53,7 @@
                     ?>">
             </div>
             <div class="deconnexion">
-                <a href="#">Deconnexion</a>
+                <a href="../template-admin/deconnexion.php">Deconnexion</a>
             </div>
         </div>
     </header>
@@ -56,19 +61,19 @@
 
         <nav id="navbar" >
             <div class="nav-items">
-                <a href="../template_stagaire/home.html">
+                <a href="../template_stagaire/main.php">
                     <img src="../img/icons-nav/home.png" alt="">
                     <span id="main-meun">Home</span>
                 </a>
             </div>
             <div class="nav-items">
-                <a href="../template_stagaire/notes.html">
+                <a href="../template_stagaire/grads.php">
                     <img src="../img/icons-nav/notes.png" alt="">
                     <span id="main-meun">Notes</span>
                 </a>
             </div>
             <div class="nav-items">
-                <a href="../template/reclamation.html">
+                <a href="../template/reclamation.php">
                     <img src="../img/icons-nav/contact.png" alt="">
                     <span id="main-meun">Reclamation</span>
                 </a>
@@ -181,40 +186,32 @@
                         <div class="notes-header">
                             Dernières notes <span><a href="#" class="fa-solid fa-rotate"></a></span>
                         </div>
-                        <div class="note-item">
-                            <div class="note-title">JAVA SCRIPT</div>
-                            <div class="note-subtitle">Premier contrôle</div>
-                            <div class="note-date">22/06</div>
-                            <div class="note-score">19.00</div>
-                        </div>
-                        <div class="note-item">
-                            <div class="note-title">JAVA SCRIPT</div>
-                            <div class="note-subtitle">deuxeime contrôle</div>
-                            <div class="note-date">22/06</div>
-                            <div class="note-score">20.00</div>
-                        </div>
-                        <div class="note-item">
-                            <div class="note-title">LANGUE ARABE</div>
-                            <div class="note-subtitle">Premier contrôle</div>
-                            <div class="note-date">13/06</div>
-                            <div class="note-score">17.00</div>
-                        </div>
-                        <div class="note-item">
-                            <div class="note-title">WEB DYNAMIQAUE</div>
-                            <div class="note-subtitle">EFM</div>
-                            <div class="note-date">13/06</div>
-                            <div class="note-score">36.00</div>
-                        </div>
+                        <?php foreach($info as $inf): ?>
+                            <div class="notes">
+                                
+                                    <tr>
+                                    <div class="note-title"><?= $inf['subject_id']?></div>
+                                    <div class="note-subtitle"><?= $inf['id_Evaluation']?></div>
+                                    <div class="note-date"><?= $inf['date_evaluation']?></div>
+                                <div class="note-score"><?= $inf['NameNote']?></div>       
+                               </div>
+                        <?php endforeach; ?>
+                        </div>                        
                     </div>
-                </div>
-                <div class="L-pro">
+                    <div class="L-pro">
                   <div class="Licene">
-                    <img src="../img/ph-scoliare/Licenece pro.png" alt="">
+                    <div class="Lic-img">
+                    <img src="../img/icons-nav/Licenece pro.png" alt="">
                     <h3>Liecene Professionnelle</h3>
-                    <button>Cliquez ici</button>
+                    </div>
+                    <button><a href="../template/licencepro.html">Cliquez ici</a></button>
                   </div>
                 </div>
+                </div>
+                
             </div>
+             
+                
         </div>
 
 
